@@ -58,10 +58,12 @@ class MainActivity : AppCompatActivity() {
         binding.listview.setOnItemClickListener { parent, view, position, id ->
 
             val name = name[position]
+            val imageId = imageId[position]
 
 
             val i = Intent(this,UserActivity::class.java)
             i.putExtra("name",name)
+            i.putExtra("imageId",imageId)
 
             startActivity(i)
 
